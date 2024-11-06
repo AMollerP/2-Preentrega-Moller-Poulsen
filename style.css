@@ -1,0 +1,295 @@
+/*comentario*/  
+
+/*Generales*/
+ header
+    {background-color: white;
+        color: white;
+        padding: 10px;}
+
+.header_superior
+        {display: flex;
+        align-items: center;
+        justify-content: space-between;}
+
+.block-marca {
+        background-color: #1a4a5a; 
+        height: 100px; 
+        width: 100%; 
+        margin: 20px 0; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;}
+
+body 
+    {height: 100%;
+    margin: 0;}
+
+.logo 
+    {padding: 10px 10px;}
+
+.search
+    {width: 300px;
+    padding:10px}
+
+.container 
+    {display: flex;
+    flex-direction: column; 
+    min-height: 100vh;}
+
+main
+    {flex:1;
+    padding: 20px;
+    background-color: white;}
+/*Fin Generales*/
+
+/*Botones Navegacion*/
+nav
+    {background-color: white;
+     display: flex;
+     justify-content: flex-end;}
+    
+.menu 
+    {list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;}
+    
+.menu > li 
+    {float:left;
+    position: relative;
+    margin-left: 20px;}
+    
+.menu > li > a 
+    {display: block;
+    padding: 15px;
+    color: #1a4a5a;
+    text-decoration: none;
+    border-radius: 10px;}
+    
+.menu > li:hover > a 
+    {background-color: #1a4a5a;
+    color: whitesmoke;}
+    
+.submenu 
+    {display: none;
+    position: absolute;
+    background-color: #1a4a5a;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    border-radius: 10px;}
+    
+.submenu li 
+    {float: none;}
+    
+.menu > li:hover .submenu 
+    {display: block;}
+    
+.submenu a 
+    {padding: 10px;
+    color: #1a4a5a;
+    text-decoration: none;
+    display: block;
+    color: whitesmoke;}
+    
+.submenu a:hover 
+    {background-color: #25677d;
+    border-radius: 10px;
+    color: whitesmoke;}
+/*Fin Botones Navegacion*/
+
+/*Imagenes*/                        /*Cambiar las imágenes. Fondos más limpios.*/
+.gallery
+    {display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;}
+    
+.gallery img
+    {width: 98%;
+    margin-bottom: 10px;}
+
+.redondeado                         /*¿Conviene dejarlo como una class en HTML o como hice en .image-container img, que lo puse directamente dentro de la clase?*/
+    {border-radius:8px;
+    width: 100%;
+    height: auto;}  
+
+.tamañoletra
+    {font-size:12px;}
+
+.item 
+    {width:calc(33.33% - 20px);     /*Chequear esto*/
+    margin-bottom: 20px;
+    text-align: center;}
+
+/*---Pantallas Medianas---*/
+@media (max-width: 768px)
+    {.item
+        {width: calc(50% - 20px);}}
+/*---Pantallas Pequeñas---*/
+@media (max-width: 480px)
+    {.item
+        {width: 100%;}}
+/*Fin Imagenes*/
+
+/*Bloque*/
+.color-block 
+    {background-color: #1a4a5a;
+    height: 60px; 
+    width: 100%; 
+    margin: 20px 0;
+    position: relative; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    font-size: 24px;}
+
+#subtitulogaleria
+    {color: whitesmoke;}
+#subtituloproductos
+    {color: whitesmoke;}
+#subtitulopreguntas                  
+    {color: whitesmoke;}
+/*Fin Bloque*/
+
+/*Galeria*/
+.gallery
+    {display: flex;
+    gap: 20px;
+    justify-content: center;}
+
+.image-container
+    {position: relative;
+    display: block;}
+
+.image-container img
+    {width: 400px; 
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.1s;}
+
+.image-container:hover img
+    {transform: scale(1.02);}
+
+.overlay
+    {position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: transform 0.1s;
+    border-radius: 8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-style: bold;
+    text-align: center;}
+
+.image-container:hover .overlay
+    {opacity: 1;}
+/*Fin Galeria*/
+
+/*Textos*/
+h1
+    {color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    font-style: bold;
+    text-align: center;}
+
+h2
+    {color: #1a4a5a;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-style: bold;
+    text-align: center;}
+
+h3
+    {color:#1a4a5a;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-style:bold;
+    padding: 0px 0px 0px 20px;}
+
+p
+    {color: black;
+    font-family:sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    font-style: light;
+    text-align: justify;
+    padding: 0px 40px 10px 20px;}
+
+.textoproductos
+    {text-align: center;} 
+
+a
+    {font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;}
+
+.azul
+    {color:#1a4a5a;
+    font-size: 20px;
+    margin-top: auto;}
+/*Fin Textos*/
+
+/*Botones*/
+.item
+    {text-align: center; 
+    margin: 20px;}
+
+.button-comprar
+    {background-color: #1a4a5a; 
+    color: whitesmoke; 
+    border: none; 
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin-top: 10px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    transition: background-color 0.3s;}
+
+.button-comprar:hover
+    {background-color: #215b6e;}
+/*Fin Botones*/
+
+/*Footer*/                               
+footer p
+    {width: 100%;
+    height: 10%;
+    background-color: #1a4a5a;
+    font-family: sans-serif;
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: whitesmoke;}
+
+.iconosredes
+    {display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;                           
+    align-items: center;                   
+    justify-items: center;}
+
+.iconosredes p
+    {margin: 0;}
+
+.iconosredes a
+    {color: whitesmoke;                   
+    text-decoration: none;             
+    font-size: 12px;                  
+    margin-right: 10px;                
+    transition: color 0.3s ease;}
+
+.iconosredes a:hover
+    {color: #a3a4a5;}
+    
+/*Fin Footer*/
